@@ -1,14 +1,13 @@
-
-
 {
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1",
+    "socket.io": "^4.8.1"
   },
   "name": "primera_preentrega_backend",
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,4 +16,3 @@
   "license": "ISC",
   "description": ""
 }
-
