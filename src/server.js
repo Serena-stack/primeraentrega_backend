@@ -1,8 +1,10 @@
 import express from "express";
+import path from 'path';
 import { engine } from "express-handlebars";
 import { Server } from "socket.io";
 import productorutas from "./rutas/producto.rutas.js";
-import cartsRoutes from "./rutas/carts.routes.js";
+import cartsroutes from "./rutas/carts.routes.js";
+import viewsrutas from "./rutas/views.rutas.js";
 
 const app = express();
 const PORT = 8080;
@@ -19,9 +21,9 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "src/public")));
 
 // Rutas
-app.use("/api/products", productRoutes);
-app.use("/api/carts", cartRoutes);
-app.use("/", viewsRoutes);
+app.use("/api/producto.rutas", productorutas);
+app.use("/api/carts.routes", cartsroutes);
+app.use("/", viewsrutas);
 
 // Servidor HTTP y WebSocket
 const server = app.listen(8080, () => console.log("🔥 Servidor en http://localhost:8080"));
