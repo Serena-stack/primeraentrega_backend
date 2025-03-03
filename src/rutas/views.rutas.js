@@ -1,8 +1,14 @@
 import { Router } from "express";
 import ProductManager from "../managers/ProductManager.js";
 
+
 const router = Router();
-const productManager = new ProductManager("./src/data/productos.json");
+
+const productManager = new ProductManager("src/data/productos.json");
+
+
+
+
 
 // Vista Home con lista de productos
 router.get("/", async (req, res) => {
